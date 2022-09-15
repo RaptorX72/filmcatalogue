@@ -1,0 +1,68 @@
+body{
+    background-image:url(../resources/register_background.jpg);
+    background-size:cover;
+    background-position-y: 80px;
+    background-repeat: no-repeat;
+}
+.form{
+    position: static;
+    background:orange;
+    max-width: 700px;
+    margin-top: 250px;
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-bottom: 0px;
+    padding:45px;
+    text-align: center;
+    border-radius: 5px 5px 5px 5px;
+}
+.input{
+    font-family: sans-serif;
+    outline: 1;
+    background:white;
+    width: 200px;
+    border: 0;
+    margin: 20px 0 20px 0;
+    padding: 15px;
+    box-sizing: 15px;
+    border-radius: 5px 5px 5px 5px;
+}
+.button{
+    font-family: sans-serif;
+    font-size: 20px;
+    background: darkblue;
+    color:white;
+    width: 50%;
+    border: 0;
+    padding: 15px;
+    cursor:pointer;
+    border-radius: 5px 5px 5px 5px;
+    margin-bottom:50px;
+    margin-top: 50px;
+}
+.button:hover{
+    color:white;
+    opacity: 0.7;
+}
+
+.button2{
+    font-family: sans-serif;
+    font-size: 20px;
+    background: orange;
+    color:white;
+    width: 200px;
+    border: 0;
+    padding: 15px;
+    cursor:pointer;
+    border-radius: 5px 5px 5px 5px;
+    margin-left:650px;
+}
+.button2:hover {
+    color: darkblue;
+    opacity: 0.7;
+}
+.text{
+    font-family: sans-serif;
+    font-size: 20px;
+    color: black;
+}

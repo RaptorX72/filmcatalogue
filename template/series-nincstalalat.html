@@ -1,0 +1,19 @@
+
+<form class="form" action="series.php" method="GET" accept-charset="utf-8">
+	<input class="input" type="text" name="search" placeholder="Type here"/>
+	<br />
+	<p style="font-size: 0.7em;">Type nothing to list all films</p>
+	<fieldset>
+		<legend >Search by</legend>
+		<input class="searchby" type="radio" name="criteria" value="name" checked="true" />Name
+		<input class="searchby" type="radio" name="criteria" value="epname" />Episode name
+	</fieldset>
+	<input class="button" type="submit" name="submit" value="Search" />
+</form>
+
+
+<hr />
+<br />
+
+<form action="seriesform.php" method="POST" accept-charset="utf-8"><input type="submit" name="" value="Add series"/></form>
+<p>No series found</p>

@@ -1,0 +1,75 @@
+<form action="filmform.php" method="POST" accept-charset="utf-8">
+<input type="text" name="filmid" value="1" hidden/>
+<input type="submit" name="" value="Edit"/>
+</form>
+<form action="../php/alterfilm.php" method="POST" accept-charset="utf-8">
+<input type="text" name="filmid" value="1" hidden/>
+<input type="text" name="delete" value="true" hidden />
+<input type="submit" name="" value="Delete"/>
+</form>
+<form action="episodeform.php" method="POST" accept-charset="utf-8">
+<input type="text" name="filmid" value="1" hidden/>
+<input type="submit" name="" value="Edit episode relation"/>
+</form>
+<form action="../php/alterepisode.php" method="POST" accept-charset="utf-8">
+<input type="text" name="filmid" value="1" hidden/>
+<input type="text" name="delete" value="true" hidden />
+<input type="submit" name="" value="Delete episode relation"/>
+</form>
+<form action="roleform.php" method="POST" accept-charset="utf-8">
+<input type="text" name="filmid" value="1" hidden/>
+<input type="submit" name="" value="Add role"/>
+</form>
+<h1><a href="film.php?fid=1">The Shawshank Redemption</a></h1>
+<p>Year: 1994</p>
+<p>Rating: 0</p>
+<form action="../php/ratefilm.php" method="POST" accept-charset="utf-8">
+<input type="text" name="filmid" value="1" hidden/>
+<input type="text" name="userid" value="1" hidden/>
+<input type="number" name="rating" value="0" min="0" max="5" />
+<input type="submit" name="" value="Rate"/>
+</form>
+<p>Length: 142 min</p>
+<img src="../resources/img/The Shawshank Redemption.jpg"/>
+<br />
+Directors:
+<br /><a href="../pages/person.php?pid=1">asd dsa
+   </a>
+<form action="../php/alterrole.php" method="POST" accept-charset="utf-8">
+<input type="text" name="pid" value="1" hidden/>
+<input type="text" name="filmid" value="1" hidden/>
+<input type="text" name="roletype" value="Directing" hidden/>
+<input type="text" name="delete" value="true" hidden />
+<input type="submit" value="Delete"/>
+</form>
+<br />
+Writers:
+<p>No writers found!</p>
+<br />
+Stars:
+<p>No stars found!</p>
+<br />
+<h1 style="border-style: dotted;">admin</h1>
+<form action="commentform.php" method="POST" accept-charset="utf-8">
+<input type="text" name="userid" value="1" hidden/>
+<input type="text" name="type" value="film" hidden/>
+<input type="text" name="cid" value="1" hidden/>
+<input type="submit" name="" value="Edit"/>
+</form>
+<form action="../php/altercomment.php" method="POST" accept-charset="utf-8">
+<input type="text" name="delete" value="true" hidden />
+<input type="text" name="type" value="film" hidden/>
+<input type="text" name="cid" value="1" hidden/>
+<input type="text" name="delete" value="true" hidden />
+<input type="submit" name="" value="Delete"/>
+</form>
+<img src="../resources/img/nopicture.png"/>
+<p>2019-11-27 18:04:05</p>
+<p>asd</p>
+<hr />
+<form action="commentform.php" method="POST" accept-charset="utf-8">
+	<input type="text" name="tid" value="1" hidden />
+	<input type="text" name="userid" value="1" hidden />
+	<input type="text" name="type" value="film" hidden />
+	<input type="submit" name="" value="New comment"/>
+</form>

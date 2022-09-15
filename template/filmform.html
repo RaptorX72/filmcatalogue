@@ -1,0 +1,16 @@
+<form action="../php/alterfilm.php" method="POST" accept-charset="utf-8" enctype="multipart/form-data">
+	<input type="text" name="filmid" value="2" hidden />
+	<span>Film name</span>
+	<input type="text" name="name" value="The Godfather" />
+	<br />
+	<span>Year</span>
+	<input type="text" name="year" value="1972"/>
+	<br />
+	<span>Length</span>
+	<input type="text" name="length" value="175"/>
+	<br />
+	<input type="file" name="image" accept="image/png, image/jpeg" />
+	<br />
+	<img src="../resources/img/The Godfather.jpg" />
+	<input type="submit" name="Edit film"/>
+</form>

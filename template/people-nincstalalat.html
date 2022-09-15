@@ -1,0 +1,21 @@
+
+<form class="form" action="people.php" method="GET" accept-charset="utf-8">
+	<input class="input" type="text" name="search" placeholder="Type here"/>
+	<br />
+	<p style="font-size: 0.7em;">Type nothing to list all people</p>
+	<fieldset>
+		<legend >Search by</legend>
+		<input class="searchby" type="radio" name="criteria" value="name" checked="true" />Name
+		<input class="searchby" type="radio" name="criteria" value="year" />Year
+		<input class="searchby" type="radio" name="criteria" value="month" />Month
+		<input class="searchby" type="radio" name="criteria" value="day" />Day
+	</fieldset>
+	<input class="button" type="submit" name="submit" value="Search" />
+</form>
+
+
+<hr />
+<br />
+
+<form action="personform.php" method="POST" accept-charset="utf-8"><input type="submit" name="" value="Add person"/></form>
+<p>No people found</p>

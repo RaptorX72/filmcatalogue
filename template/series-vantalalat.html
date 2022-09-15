@@ -1,0 +1,32 @@
+
+<form class="form" action="series.php" method="GET" accept-charset="utf-8">
+	<input class="input" type="text" name="search" placeholder="Type here"/>
+	<br />
+	<p style="font-size: 0.7em;">Type nothing to list all films</p>
+	<fieldset>
+		<legend >Search by</legend>
+		<input class="searchby" type="radio" name="criteria" value="name" checked="true" />Name
+		<input class="searchby" type="radio" name="criteria" value="epname" />Episode name
+	</fieldset>
+	<input class="button" type="submit" name="submit" value="Search" />
+</form>
+
+
+<hr />
+<br />
+
+<form action="seriesform.php" method="POST" accept-charset="utf-8"><input type="submit" name="" value="Add series"/></form>
+<div style="border: 2px solid blue; margin: 15px;">
+<form action="seriesform.php" method="POST" accept-charset="utf-8">
+<input type="text" name="seriesid" value="1" hidden/>
+<input type="submit" name="" value="Edit"/>
+</form>
+<form action="../php/alterseries.php" method="POST" accept-charset="utf-8">
+<input type="text" name="seriesid" value="1" hidden/>
+<input type="text" name="delete" value="true" hidden />
+<input type="submit" name="" value="Delete"/>
+</form>
+<h1><a href="seria.php?sid=1">Breaking Bad</a></h1>
+<p>Number of seasons: 1</p>
+<img src="../resources/img/nopicture.png"/>
+</div>

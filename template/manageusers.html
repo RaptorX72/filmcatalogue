@@ -1,0 +1,39 @@
+
+<li><a href="user.php?userid=1" title="">admin | 123@asd.com</a>
+</li>
+<li><a href="user.php?userid=2" title="">user1 | 321@asd.com</a>
+<form action="../php/editadmin.php" method="POST" accept-charset="utf-8">
+<input type="text" name="userid" value="2" hidden/>
+<input type="text" name="adminstatus" value="0" hidden/>
+<input type="submit" name="" value="Grant admin"/>
+</form>
+<form action="../php/alteruser.php" method="POST" accept-charset="utf-8">
+<input type="text" name="userid" value="2" hidden/>
+<input type="text" name="delete" value="1" hidden/>
+<input type="submit" name="" value="Delete user"/>
+</form>
+</li>
+<li><a href="user.php?userid=3" title="">user2 | q@asd.com</a>
+<form action="../php/editadmin.php" method="POST" accept-charset="utf-8">
+<input type="text" name="userid" value="3" hidden/>
+<input type="text" name="adminstatus" value="0" hidden/>
+<input type="submit" name="" value="Grant admin"/>
+</form>
+<form action="../php/alteruser.php" method="POST" accept-charset="utf-8">
+<input type="text" name="userid" value="3" hidden/>
+<input type="text" name="delete" value="1" hidden/>
+<input type="submit" name="" value="Delete user"/>
+</form>
+</li>
+<li><a href="user.php?userid=4" title="">user3 | qw@asd.com</a>
+<form action="../php/editadmin.php" method="POST" accept-charset="utf-8">
+<input type="text" name="userid" value="4" hidden/>
+<input type="text" name="adminstatus" value="1" hidden/>
+<input type="submit" name="" value="Revoke admin"/>
+</form>
+<form action="../php/alteruser.php" method="POST" accept-charset="utf-8">
+<input type="text" name="userid" value="4" hidden/>
+<input type="text" name="delete" value="1" hidden/>
+<input type="submit" name="" value="Delete user"/>
+</form>
+</li>

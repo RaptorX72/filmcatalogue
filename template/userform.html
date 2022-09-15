@@ -1,0 +1,35 @@
+
+<form action="../php/alteruser.php" method="POST" accept-charset="utf-8" enctype="multipart/form-data">
+<input type="text" name="image" value="null" hidden />
+<span>Username</span>
+<input type="text" name="username" value="admin" />
+<br />
+<span>email</span>
+<input type="text" name="email" value="123@asd.com"/>
+<br />
+<fieldset>
+<legend>Edit password</legend>
+<span>New password</span>
+<input type="password" name="newpass" value=""/>
+<br />
+<span>New password confirm</span>
+<input type="password" name="newpassc" value=""/>
+<br />
+<hr />
+<span>Old password</span>
+<input type="password" name="cpass" value=""/>
+<br /></fieldset>
+<input type="file" name="image" accept="image/png, image/jpeg" />
+<br />
+<img src="../resources/img/nopicperson.png" />
+<input type="submit" name="Edit film"/></form>
+<br />
+<br />
+<br />
+<br />
+<br />
+<form action="../php/alteruser.php" method="POST" accept-charset="utf-8">
+<input type="text" name="userid" value="1" hidden />
+<input type="text" name="delete" value="true" hidden />
+<input type="submit" name="delete" value="Delete account"/>
+</form>

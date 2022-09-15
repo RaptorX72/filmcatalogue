@@ -1,0 +1,15 @@
+<div style="border: 2px solid blue; margin: 15px;">
+<form action="filmform.php" method="POST" accept-charset="utf-8">
+<input type="text" name="filmid" value="2" hidden/>
+<input type="submit" name="" value="Edit"/>
+</form>
+<form action="../php/alterfilm.php" method="POST" accept-charset="utf-8">
+<input type="text" name="filmid" value="2" hidden/>
+<input type="text" name="delete" value="true" hidden />
+<input type="submit" name="" value="Delete"/>
+</form>
+<h1><a href="film.php?fid=2">The Godfather</a></h1>
+<h3>Year: 1972</h3>
+<h3>Rating: 0</h3>
+<img src="../resources/img/The Godfather.jpg"/>
+</div><form action="../php/clearhistory.php" method="POST" accept-charset="utf-8"><input type="text" name="userid" value="1" hidden /><input type="submit" name="" value="Clear history"/></form>

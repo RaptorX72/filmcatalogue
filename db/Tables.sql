@@ -1,0 +1,102 @@
+/*Database table queries*/
+
+CREATE TABLE Users (
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	username VARCHAR(64) NOT NULL,
+	password VARCHAR(128) NOT NULL,
+	salt VARCHAR(16) NOT NULL,
+	email VARCHAR(255) NOT NULL,
+	admin BOOLEAN NOT NULL,
+	image VARCHAR(255)
+);
+
+CREATE TABLE Series (
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(128) NOT NULL,
+	image VARCHAR(255)
+);
+
+CREATE TABLE Films (
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(255) NOT NULL,
+	year SMALLINT NOT NULL,
+	length INT NOT NULL,
+	image VARCHAR(255)
+);
+
+CREATE TABLE Humans (
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	firstname VARCHAR(128) NOT NULL,
+	lastname VARCHAR(128) NOT NULL,
+	birthdate DATE NOT NULL,
+	image VARCHAR(255)
+);
+
+/*----*/
+
+CREATE TABLE Episodes (
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	filmid INT NOT NULL,
+	seriesid INT NOT NULL,
+	season SMALLINT NOT NULL,
+	epnumber INT,
+	FOREIGN KEY (filmid) REFERENCES Films(id),
+	FOREIGN KEY (seriesid) REFERENCES Series(id)
+);
+
+CREATE TABLE SeriesComments (
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	userid INT NOT NULL,
+	seriesid INT NOT NULL,
+	postdate DATETIME NOT NULL,
+	posttext TEXT NOT NULL,
+	FOREIGN KEY (userid) REFERENCES Users(id),
+	FOREIGN KEY (seriesid) REFERENCES Series(id)
+);
+
+CREATE TABLE FilmComments (
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	userid INT NOT NULL,
+	filmid INT NOT NULL,
+	postdate DATETIME NOT NULL,
+	posttext TEXT NOT NULL,
+	FOREIGN KEY (userid) REFERENCES Users(id),
+	FOREIGN KEY (filmid) REFERENCES Films(id)
+);
+
+CREATE TABLE Rating (
+	filmid INT NOT NULL,
+	userid INT NOT NULL,
+	rating DOUBLE NOT NULL,
+	FOREIGN KEY (filmid) REFERENCES Films(id),
+	FOREIGN KEY (userid) REFERENCES Users(id)
+);
+
+CREATE TABLE History (
+	userid INT NOT NULL,
+	filmid INT NOT NULL,
+	FOREIGN KEY (userid) REFERENCES Users(id),
+	FOREIGN KEY (filmid) REFERENCES Films(id)
+);
+
+CREATE TABLE Writing (
+	humanid INT NOT NULL,
+	filmid INT NOT NULL,
+	FOREIGN KEY (humanid) REFERENCES Humans(id),
+	FOREIGN KEY (filmid) REFERENCES Films(id)
+);
+
+CREATE TABLE Directing (
+	humanid INT NOT NULL,
+	filmid INT NOT NULL,
+	FOREIGN KEY (humanid) REFERENCES Humans(id),
+	FOREIGN KEY (filmid) REFERENCES Films(id)
+);
+
+CREATE TABLE Plays (
+	humanid INT NOT NULL,
+	filmid INT NOT NULL,
+	star BOOLEAN NOT NULL,
+	FOREIGN KEY (humanid) REFERENCES Humans(id),
+	FOREIGN KEY (filmid) REFERENCES Films(id)
+);
